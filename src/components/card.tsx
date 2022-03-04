@@ -122,7 +122,9 @@ const ListCard: React.FC<listProps> = ({
 						{isListing ? (
 							"collabs"
 						) : value < 2 ? (
-							<p className="bg-yellowOne p-1 w-8 text-brownOne rounded">New</p>
+							<span className="bg-yellowOne p-1 w-8 text-brownOne rounded">
+								New
+							</span>
 						) : (
 							`${value} comments`
 						)}

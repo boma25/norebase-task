@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react"
+import React, { useEffect } from "react"
 import { InfoCard } from "../card"
 import { ButtonTransparent, ButtonSecondary } from "../inputs/customButton"
 import {
@@ -12,6 +12,9 @@ import {
 import { LinkLists } from "../links"
 
 const LeftColumn: React.FC = () => {
+	useEffect(() => {
+		console.log()
+	}, [])
 	return (
 		<div>
 			<InfoCard className="w-full">
@@ -53,7 +56,7 @@ const LeftColumn: React.FC = () => {
 			<div className="h-[300px] overflow-y-auto ml-1 mb-4">
 				{tags.map(({ name, href }) => (
 					<div
-						className="flex hover:text-primaryBlue hover:underline cursor-pointer text-sm text-primaryGray space-x-2 items-center mt-2 hover:bg-primaryBg w-8/12 px-3 rounded py-1"
+						className="flex hover:text-primaryBlue hover:underline cursor-pointer text-sm text-primaryGray space-x-2 items-center mt-2 hover:bg-primaryBg w-11/12 px-3 rounded py-1"
 						key={name}
 					>
 						<a className=" " href={href}>

@@ -17,7 +17,7 @@ const CenterColumn: React.FC = () => {
 				</ul>
 			</div>
 			{posts.slice(0, 5).map((value) => (
-				<PostCard isFirst={value === 0} />
+				<PostCard isFirst={value === 0} key={`post-${value}`} />
 			))}
 			<div className="mt-8">
 				<div className="flex space-x-6 justify-center items-center mb-6">
@@ -51,7 +51,7 @@ const CenterColumn: React.FC = () => {
 				</div>
 			</div>
 			{posts.slice(5).map((value) => (
-				<PostCard isFirst={value === 0} />
+				<PostCard isFirst={value === 0} key={`post-${value}`} />
 			))}
 		</div>
 	)
